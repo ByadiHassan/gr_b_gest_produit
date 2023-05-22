@@ -1,5 +1,5 @@
-for i in range(10):
-    pass
-print('aa')
+from clavier import Clavier
+
+n=Clavier.getString("Tapez votre nom ?")
     
       

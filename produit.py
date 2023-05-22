@@ -1,6 +1,8 @@
 class Produit:
-    def __init__(self,id,design,prix) :
-        self.setId(id)
+    auto=0
+    def __init__(self,design,prix) :
+        Produit.auto+=1
+        self.setId(Produit.auto)
         self.setDesign(design)
         self.setPrix(prix)
 
