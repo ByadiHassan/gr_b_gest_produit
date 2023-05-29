@@ -1,4 +1,6 @@
 from produit import Produit
+from habit import Habit
+
 class Clavier:
     @staticmethod
     def getString(msg):
@@ -38,3 +40,9 @@ class Clavier:
         #return Produit(Clavier.getInt("Tapez l'id du produit ? "),
         # Clavier.getString("Tapez La désignation  du produit ? "),
         # Clavier.getFloat("Tapez le prix du produit ? "))
+    @staticmethod
+    def getHabit():
+        return Habit(Clavier.getString("Tapez La désignation  du produit ? "),
+        Clavier.getFloat("Tapez le prix du produit ? "),
+        Clavier.getString("Tapez La couleur  du produit ? "),
+        Clavier.getString("Tapez La taille  du produit ? "));

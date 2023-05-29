@@ -3,8 +3,9 @@ from produit import Produit
 from clavier import Clavier
 mag =Magasin()
 choix=0
-while choix!=5:
-    choix=Clavier.getInt ("1. Ajouter\n2. Afficher\n3. Enregistrer\n4. Ouvrir\n5. Quitter\n4.Tapez votre choix ?")
+while choix!=6:
+    choix=Clavier.getValue (int,"1. Ajouter\n2. Afficher\n3. Enregistrer\n"
+    "4. Ouvrir\n5. Ajouter Habit\n6. Quitter\nTapez votre choix ?")
     if choix==1:
         # id=int(input("Tapez l'id du produit ? "))
         # design=input("Tapez La désignation  du produit ? ")
@@ -19,6 +20,8 @@ while choix!=5:
     elif choix==4:
         mag.Charger()
         mag.afficher()
+    elif choix==5:
+        mag.ajouter(Clavier.getHabit())
 
 
 
